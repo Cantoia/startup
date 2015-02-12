@@ -1,0 +1,44 @@
+.header{
+	background-color: magenta; 
+	text-align: center;
+	font-size: 46px;
+	width: 100%;
+}
+.navigation{
+	background-color: blue;
+	font-size: 12px;
+	width: 25%;
+	height: 200px;
+	float: left;
+}
+.sidebar{
+	background-color: magenta;
+	font-size: 10px;
+	height: 200px;
+	float: left;
+	width: 25%
+}
+.content{
+	font-size: 14px;
+	float: left;
+	height: 200px;
+	width: 50%
+
+}
+
+.footer{
+ 	background-color: magenta;
+ 	text-align: center;
+ 	font-size: 10px;
+ 	width: 100%;
+ 	clear:both;
+}
+
+.parrafo{
+	text-align: center;
+	font-family: arial;
+	color: green;
+	font-size: 20px;
+
+}
+

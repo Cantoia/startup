@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <title>Formulario</title>
+  <meta name="description" content="Formulario de Contacto">
+  <meta name="keywords" content="Formulario, Contacto, Noel Cantoia">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<form>
+	<fieldset>
+		<legend>Formulario</legend>
+	<ul>
+		<li>
+			<label for = "name">Nombre y Apellido:</label>
+			<input type="text" name="name" id="name" value="" required>
+		</li>
+		<li>
+			<label for ="mail">Mail:</label>
+			<input type="email" name="mail" id="mail" value="" required>
+		</li>
+		<li>
+			<label for ="fnac">Fecha Nacimiento:</label>
+			<input type="date" name="fnac" id="fnac" value="" required>
+		</li>
+		<li>
+			<label for="deportefavorito">Elija su deporte favorito:</label>
+			<select id="deportefavorito" name="deportefavorito" required>
+         		<option  selected=""  value="">Handball</option>
+         		<option  value="2">Tennis</option>
+         		<option  value="3">Fotbol</option>
+         		<option  value="4">Natacion</option>
+         		<option  value="5">Basket</option>
+        	</select>
+		</li>
+		<li>
+			<label for="biografia">Biografia:</label>
+			<textarea name="biografia" id="biografia" cols="25" rows="3" required></textarea>
+		</li>
+	</ul>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Borrar">
+		
+
+	
+	</fieldset>
+</form>
+</body>
+</html>
