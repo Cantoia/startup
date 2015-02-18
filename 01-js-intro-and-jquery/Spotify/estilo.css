@@ -1,0 +1,65 @@
+.content{
+	width: 50%;
+	height: auto;
+}
+
+.header{
+	background-image: url("Imagenes/baner.jpg");
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-size: contain;
+ 	width: 100%;
+ 	height: 150px;
+ 	float:center;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+
+
+.celdas{
+	float: left;
+	height: 60px;
+	width: 100%;
+	background-color: orange;
+	border: black;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	text-align: initial;
+	font-size: 12px;
+}
+
+.fotos{
+	float: left;
+	height: 100%;
+	width: 60px;
+}
+
+.tipo{
+	font-size: 10px;
+}
+
+.web{
+	float: right;
+	bottom: 0px;
+}
+
+p{
+	display: table-header-group;
+}
+
+@media all and (min-width: 1001px) {
+	.content{
+		width: 50%;
+		float: left;
+		height: auto;
+	}	
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+	.content{
+		width: 50%;
+		float: left;
+		height: auto;
+	}
+}
