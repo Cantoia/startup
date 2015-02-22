@@ -1,8 +1,10 @@
-$(document).ready(function enfocar() {
+$(document).ready(function() {
 	if($("#probando1").is(":hidden")){
 		$("#probando2").focus();
 	}
 });
+//Hacer que el usuario tipea el nombre y la pagina le de el saludo !
+//pasar a llamada el nombre, el succes y el fail, referencia a una funcion
 
 function llamada(){
 	$.ajax({

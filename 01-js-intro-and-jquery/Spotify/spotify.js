@@ -1,5 +1,5 @@
-$(document).ready (function llamada(){	
-	$("#btn").click (function llamada(){
+$(document).ready (function(){
+	$("#btn").click (function (){
 			$.ajax({
 				url: "https://api.spotify.com/v1/search",
 				dataType: "json",
