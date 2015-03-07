@@ -1,6 +1,7 @@
 var $ = require ("C:/startup/03-Node-npm-modules/Modulos/Jquery/node_modules/jquery/dist/jquery.js");
 var Movie = require ('C:/startup/03-Node-npm-modules/Modulos/Movie/pelicula.js');
 var Director = require('C:/startup/03-Node-npm-modules/Modulos/Director/director.js');
+//.. para volver para atras en carpetas, probar sin document.ready
 
 $(document).ready (function(){
   var alien = new Movie();

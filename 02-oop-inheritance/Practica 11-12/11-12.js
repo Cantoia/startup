@@ -42,7 +42,7 @@ var ObserverList = function ObserverList(){
     this.duracion = duracion;
     this.director = director;
     this.obsevers = new ObserverList();
-    this.actores = [];
+    this._actores = [];
   }
   Pelicula.prototype = {
    constructor:Pelicula,
@@ -73,7 +73,7 @@ var ObserverList = function ObserverList(){
 	  }
 	},
 	agregarActor:function(actor){
-		this.actores.push(actor);
+		this._actores.push(actor);
 	}
   }
 

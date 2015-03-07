@@ -26,6 +26,12 @@
     },
     removeAt:function(index){
 	  this.observerList.splice(index, 1);
+    },
+    notificar:function(metodo){
+      var observerCount = this.count();
+      for(var i=0; i < observerCount; i++){
+        this.get(i).realizar(metodo);
+      }
     }
   }
 
@@ -58,20 +64,20 @@
       this.obsevers.removeAt(this.obsevers.indexOf(observer, 0));
     },
     notificar:function(metodo){
-      var observerCount = this.obsevers.count();
-      for(var i=0; i < observerCount; i++){
-        this.obsevers.get(i).realizar(metodo);
-      }
+      this.obsevers.notificar();
     }
+  }
 
   var Observer = function Observer(){}
   Observer.prototype ={
     constructor:Observer,
     realizar:function(metodo){
-      if(metodo == "play")
+      if(metodo == "play"){
         console.log("Esta mirando una pelicula");
-      else
+      }
+      else{
         console.log("la pelicula esta en pausa");
+      }
     }
   }
 
@@ -79,7 +85,7 @@
 
   var peliculaDos = new Pelicula("Divergente","110","Neil Burger");
 
-  var peliculaTres = new Pelicula("El Hobbit","150","Peter Jackson")
+  var peliculaTres = new Pelicula("El Hobbit","150","Peter Jackson");
 
   var obs = new Observer();
 
