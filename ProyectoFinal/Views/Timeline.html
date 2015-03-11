@@ -5,12 +5,14 @@
  	</div>
  	<div class="panel-body">
 		 <div class="media" ng-repeat="tweet in timeline">
-		 	<div class="MyContainerInside">
-			    <div class="pull-right"><img class="img-circle" src="{{tweet.user.profile_image_url}}"></div>
-			    <div class="media-body"></div>
-			    <h5 class="media-heading">{{tweet.user.name}}:</h5>
-			    <div class="media">{{tweet.text}}</div>
-		    </div>
+		 	<a href="#Details" ng-click="getDetail($index)">
+			 	<div class="MyContainerInside">
+				    <div class="pull-right"><img class="img-circle" src="{{tweet.user.profile_image_url}}"></div>
+				    <div class="media-body"></div>
+				    <h5 class="media-heading">{{tweet.user.name}}:</h5>
+				    <div class="media">{{tweet.text}}</div>
+			    </div>
+			</a>
 		 </div>
 	 </div>
  </div>

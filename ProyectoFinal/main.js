@@ -14,6 +14,10 @@ myApp.config(function($routeProvider){
 	  	templateUrl: "Views/Trends.html",
 	  	controller: "trendsController"
 	  })
+	  .when("/Details",{
+	  	templateUrl: "Views/Details.html",
+	  	controller: "timelineController"
+	  })
 	  .otherwise({
 	  	redirectTo: "/Inicio"
 	  });
