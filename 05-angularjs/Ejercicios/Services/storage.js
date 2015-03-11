@@ -1,21 +1,16 @@
 myApp.service("Storage",["$window",
   function($window){
-    var movies = [];
+    var movies;
 
     if(!$window.localStorage){
-      alert("No tienes localStorage activado");
+      alert("No esta soportado");
     }
     else{
-      movies = $window.localStorage.getItem("Movies");
+      movies = angular.fromJson($window.localStorage.getItem("Movies")) || [];
     }
+    //Fijarse el tema de responsabilidades... se tendria que poner mas funcionalidad en el controller
     
     this.saveM = function(Movie){
-      if(movies == null){
-      	movies = [];
-      }
-      else{
-        movies = angular.fromJson(movies);	
-      }
       movies.push(Movie);
       moviesString = JSON.stringify(movies);
       $window.localStorage.setItem("Movies", moviesString);
@@ -26,14 +21,12 @@ myApp.service("Storage",["$window",
     }
 
     this.deleteM = function(index){
-      movies = angular.fromJson(movies);
       movies.splice(index,1);
       moviesString = JSON.stringify(movies);
       $window.localStorage.setItem("Movies", moviesString);
     }
 
     this.editM = function(index,m1){
-      movies = angular.fromJson(movies);
       movies.splice(index,1,m1);
       moviesString = JSON.stringify(movies);
       $window.localStorage.setItem("Movies", moviesString);

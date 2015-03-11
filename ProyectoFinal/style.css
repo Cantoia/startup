@@ -1,0 +1,48 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer{
+  position: relative;
+  display: block;
+  bottom: 0;
+  text-align: right;
+}
+
+.home{
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: center;
+  border-radius: 100px;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+.MyContainer{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.MyContainerInside{
+  color: white;
+  background-color: #1B476E;
+  border-color: rgb(31, 82, 243);
+  margin-top: 1px;
+  border-radius: 10px;
+}
+
+@media all and (min-width: 1001px) {
+  .MyContainer{
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .MyContainer{
+    width: 70%;
+    margin-left: 15%;
+  }
+}

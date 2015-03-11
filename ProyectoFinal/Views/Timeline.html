@@ -1,4 +1,17 @@
-<div>
- <p>Timeline</p>
- <p>Esta pagina pertenece a: {{message}}</p>
+<div class="MyContainer">
+ <div class="panel panel-primary">
+ 	<div class="panel-heading">
+ 	  		<button class="btn btn-large btn-primary center-block" ng-click="getTimeline()"> Get your timeline</button>
+ 	</div>
+ 	<div class="panel-body">
+		 <div class="media" ng-repeat="tweet in timeline">
+		 	<div class="MyContainerInside">
+			    <div class="pull-right"><img class="img-circle" src="{{tweet.user.profile_image_url}}"></div>
+			    <div class="media-body"></div>
+			    <h5 class="media-heading">{{tweet.user.name}}:</h5>
+			    <div class="media">{{tweet.text}}</div>
+		    </div>
+		 </div>
+	 </div>
+ </div>
 </div>

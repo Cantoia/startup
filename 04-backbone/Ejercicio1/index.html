@@ -19,24 +19,26 @@
         <ul id="list-movies"></ul>
       </div>
       <div>
-        <label>Nombre: </label>
-        <input type="text" id="Movie_name" />
-        <label>Año: </label>
-        <input type="text" id="Movie_year" />
-        <label>Descripcion: </label>
-        <input type="text" id="Movie_description" />
-        <label>Genero: </label>
-        <input type="text" id="Movie_genre" />
-        <input type="button" id="add_button" value="Add"/>
+        <form>
+          <label for="Movie_name">Nombre: </label>
+          <input type="text" id="Movie_name" />
+          <label for="Movie_year">Año: </label>
+          <input type="text" id="Movie_year" />
+          <label for="Movie_description">Descripcion: </label>
+          <input type="text" id="Movie_description" />
+          <label for="Movie_genre">Genero: </label>
+          <input type="text" id="Movie_genre" />
+          <input type="button" id="add_button" value="Add"/>
+        </form>
       </div>
     </section>
     <script id="movie-template" type="text/x-handlebars-template">
-      <p class="movie">Name: {{name}}, Año: {{year}}, description: {{description}}, Genre: {{genre}} </p>
+      <p class="movie">Name: {{name}}, Year: {{year}}, Description: {{description}}, Genre: {{genre}} </p>
       <input type="button" id="delete_button" value="Delete"/>
       <input type="button" id="edit_button" value="Edit"/>
     </script>
     <script id="movie-template-ejercicio1" type="text/x-handlebars-template">
-      <p id="Movies" class="movie">Name: {{name}}, Año: {{year}}, description: {{description}}, Genre: {{genre}} </p>
+      <p id="Movies" class="movie">Name: {{name}}, Year: {{year}}, Description: {{description}}, Genre: {{genre}} </p>
     </script>
     <script src="loading.js" type="text/javascript"></script>
   </body>

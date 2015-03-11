@@ -1,3 +1,5 @@
+  //Falta guardar los datos en forma local
+
   var Movie = Backbone.Model.extend({
     defaults:{
       name: null,
@@ -16,6 +18,7 @@
     render: function(){
       var source = $("#movie-template-ejercicio1").html();
       var template = Handlebars.compile(source);
+      // probar si pasando la pelicula derecho funciona
       var context = {name:m1.get("name"), year: m1.get("year"), description:m1.get("description"), genre:m1.get("genre")};
       var output = template(context);
       $("#movieOutput").append(output);
@@ -83,7 +86,8 @@ ViewListMovies = Backbone.View.extend({
     this.render();
   },
   render:function(){
-  $("#list-movies").empty();  
+  $("#list-movies").empty(); 
+  //Probar con handlebars iterar entre los template 
     Movies.each(function(movie){
       var $li =$("<li>")
       var source = $("#movie-template").html();

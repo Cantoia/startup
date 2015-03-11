@@ -1,3 +1,3 @@
-myApp.controller("TrendsController",["$scope", function($scope){
+myApp.controller("trendsController",["$scope", function($scope){
 	$scope.message = "Trends";
 }]);

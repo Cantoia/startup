@@ -1,3 +1,5 @@
+//Falta el 2, de agregar un detalle a la pelicula !
+
 myApp.controller("MoviesCtrl",["$scope","Storage",
   function($scope, Storage){
   
