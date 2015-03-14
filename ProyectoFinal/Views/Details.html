@@ -1,6 +1,17 @@
 <div class="MyContainer">
-  <div class="MyContainerInside">
-   <p>{{Detail_name}}</p>
-   <p>{{Detail_tweet}}</p>
-  </div>
+<div class="panel panel-primary">
+ 	<div class="panel-heading">
+ 	  		<button class="btn btn-large btn-primary center-block" ng-click="goBack()"> Back</button>
+    </div>
+    <div class="panel-body">
+    	<div class="media">
+			  <div class="MyContainerInside">
+				<div class="pull-right"><img class="img-circle" ng-src="{{Detail_img}}"></div>
+				<div class="media-body"></div>
+				<h5 class="media-heading">{{Detail_name}}:</h5>
+				<div class="media">{{Detail_tweet}}</div>
+			  </div>
+			</div>
+		</div>
+	</div>
 </div>

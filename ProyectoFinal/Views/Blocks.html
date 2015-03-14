@@ -1,0 +1,18 @@
+<div class="MyContainer">
+<div class="panel panel-primary">
+ 	<div class="panel-heading">
+ 	  		<button class="btn btn-large btn-primary center-block" ng-click="getBlockss()"> Refresh Blocked People</button>
+    </div>
+    <div class="panel-body">
+      <div class="media" ng-repeat="users in blocks">
+		  <div class="MyContainerInside">
+		  	<div class="media-body">
+			<div class="pull-left"><img class="img-circle" ng-src="{{users.profile_image_url}}"></div>
+			<h4 class="media">{{users.name}}</h4>
+			</div>
+		  </div>
+      </div>
+    </div>
+</div>
+</div>
+

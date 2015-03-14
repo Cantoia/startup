@@ -1,20 +1,21 @@
-myApp.controller("mainController",["$scope","twitterService","$q",
- function($scope, twitterService, $q){
-	 
-   //Preguntar porque no lo toma
+myApp.controller("mainController",["$scope","twitterService",
+ function($scope, twitterService){
 
-	$scope.username; //name of the user loged into twitter  
-  
-    function getName(){
+   function getName(){
       twitterService.getUser()
        .then(function(response){
-         $scope.username = response.name;
+         $scope.name ="Wellcome: "+response.name;
       })
     }
 
     $scope.connect = function(){
     	var promise = twitterService.connect();
-    	promise.then(getName);	
+    	promise.then(getName);
+    }
+    
+    $scope.disconnect = function(){
+      twitterService.clearCache();
+      $scope.name = "";
     }
 
 }]);

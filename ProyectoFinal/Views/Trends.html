@@ -1,4 +1,18 @@
-<div>
- <p>Trends</p>
- <p>Esta pagina pertenece a: {{message}}</p>
+<div class="MyContainer">
+<div class="panel panel-primary">
+ 	<div class="panel-heading">
+ 	  		<button class="btn btn-large btn-primary center-block" ng-click="Update()"> Refresh Nearest Trends</button>
+    </div>
+    <div class="panel-body">
+      <div class="media" ng-repeat="t in trends">
+		  <a href="#Tweetintrends/{{t.query}}">
+        <div class="MyContainerInside">
+          <div class="media-body">
+			      <h4 class="media">{{t.name}}</h4>
+			    </div>
+		    </div>
+      </a>
+      </div>
+    </div>
+</div>
 </div>
