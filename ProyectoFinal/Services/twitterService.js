@@ -1,5 +1,7 @@
 myApp.service("twitterService",["$q", function($q){
  var rta = false;
+ var that = this;
+
 
   this.connect = function(){
       var deferred = $q.defer();
@@ -24,18 +26,24 @@ myApp.service("twitterService",["$q", function($q){
   this.clearCache = function(){
     OAuth.clearCache("twitter");
     rta = false;
+    that.name = "";
   }
 
   this.getUser = function(){
   	var deferred = $q.defer();
   	var promise = rta.get('/1.1/account/verify_credentials.json')
           .done(function(response){
+          saveName(response);
         	deferred.resolve(response);
           })
           .fail(function(err){
         	alert("Error in getting user");
           });
     return deferred.promise;
+  }
+
+   function saveName(response){
+    that.name = response.name;
   }
    
    this.getTimeline = function(){
@@ -100,7 +108,9 @@ myApp.service("twitterService",["$q", function($q){
 
    this.getTweetsTrend = function(search){
     var deferred = $q.defer();
-    var promise = rta.get("/1.1/search/tweets.json?q="+search)
+    var uri = search;
+    var res = encodeURIComponent(uri);
+    var promise = rta.get("/1.1/search/tweets.json?q=" +res)
       .done(function(response){
         deferred.resolve(response);
       })
